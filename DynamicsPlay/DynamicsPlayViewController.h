@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DynamicsPlayViewController : UIViewController
+- (IBAction)screenTapped:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIView *dynamicView;
 @end
