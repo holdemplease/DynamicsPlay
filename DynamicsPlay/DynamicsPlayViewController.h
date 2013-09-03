@@ -11,5 +11,6 @@
 @interface DynamicsPlayViewController : UIViewController
 - (IBAction)screenTapped:(id)sender;
 
+- (IBAction)dynamicViewTapped:(id)sender;
 @property (strong, nonatomic) IBOutlet UIView *dynamicView;
 @end

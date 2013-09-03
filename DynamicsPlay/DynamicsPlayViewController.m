@@ -54,8 +54,18 @@
 
 - (IBAction)screenTapped:(id)sender
 {
+    // once this behavior is added to the dynamic animator, the spring attachment behavior is no longer works
+    
     UISnapBehavior *s = [[UISnapBehavior alloc] initWithItem:self.dynamicView snapToPoint:_dynamicView_initialCenter];
     [_dynamicAnimator addBehavior:s];
+//    [_dynamicAnimator removeBehavior:s]; // look for callback for dynamic animator resting state
     
 }
+
+- (IBAction)dynamicViewTapped:(id)sender
+{
+    self.dynamicView.center = CGPointMake(self.dynamicView.center.x + 100, self.dynamicView.center.y + 100);
+    [_dynamicAnimator updateItemUsingCurrentState:self.dynamicView];
+}
+
 @end

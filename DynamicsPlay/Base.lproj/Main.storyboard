@@ -20,6 +20,10 @@
                                 <rect key="frame" x="134" y="253" width="52" height="62"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sIx-tJ-nHc" appends="YES" id="0Ns-18-5PK"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -37,6 +41,12 @@
                     <connections>
                         <action selector="screenTapped:" destination="vXZ-lx-hvc" id="lh8-B3-WoG"/>
                         <outlet property="delegate" destination="kh9-bI-dsS" id="saL-XJ-AbU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="sIx-tJ-nHc">
+                    <connections>
+                        <action selector="dynamicViewTapped:" destination="vXZ-lx-hvc" id="B18-2R-CJR"/>
+                        <outlet property="delegate" destination="kh9-bI-dsS" id="UgL-G1-yXL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
